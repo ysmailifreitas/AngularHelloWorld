@@ -4,3 +4,7 @@
 node_modules
 dist
 .cache
+.editorconfig
+browserconfig.xml
+Site Root.iml
+package-lock.json
