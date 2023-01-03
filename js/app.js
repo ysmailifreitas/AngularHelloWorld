@@ -1,10 +1,14 @@
-/* chapter2/app.js */
 'use strict';
+
 /* App Module */
+
 var helloWorldApp = angular.module('helloWorldApp', [
   'ngRoute',
   'helloWorldControllers'
+
 ]);
+
+
 helloWorldApp.config(['$routeProvider', '$locationProvider',
   function($routeProvider, $locationProvider) {
     $routeProvider.
@@ -14,6 +18,18 @@ helloWorldApp.config(['$routeProvider', '$locationProvider',
     }).when('/show', {
       templateUrl: 'partials/show.html',
       controller: 'ShowCtrl'
+    }).when('/customer', {
+      templateUrl: 'partials/customer.html',
+      controller: 'CustomerCtrl'
+    }).when('/addCustomer', {
+      templateUrl: 'partials/newCustomer.html',
+      controller: 'AddCustomerCtrl'
+    }).when('/addedCustomer/:customer/:city', {
+      templateUrl: 'partials/addedCustomer.html',
+      controller: 'AddedCustomerCtrl'
     });
+
     $locationProvider.html5Mode(false).hashPrefix('!');
   }]);
+
+
