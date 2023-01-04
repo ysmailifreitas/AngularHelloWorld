@@ -16,7 +16,7 @@ blogServices.factory('BlogPost', ['$resource',
 
 blogServices.factory('BlogList', ['$resource',
   function($resource) {
-    return $resource("http://nodeblog-micbuttoncloud.rhcloud.com/NodeBlog/blogList", {}, {
+    return $resource("http://www.goblog.ulboralabs.com/GolangBlog/blogList", {}, {
       get: {method: 'GET', cache: false, isArray: true}
     });
   }]);

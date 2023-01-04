@@ -5,7 +5,8 @@
 var blogApp = angular.module('blogApp', [
   'ngRoute',
   'blogControllers',
-  'blogServices'
+  'blogServices',
+  'blogBusinessServices'
 
 ]);
 

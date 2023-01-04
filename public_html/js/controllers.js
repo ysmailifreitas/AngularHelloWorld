@@ -33,7 +33,7 @@ blogControllers.controller('BlogViewCtrl', ['$scope', '$routeParams', 'BlogPost'
         //alert($scope.challenge.question);
         console.log("Success:" + JSON.stringify(response));
         $scope.blogEntry = response;
-        },
+      },
       function error(errorResponse) {
         console.log("Error:" + JSON.stringify(errorResponse));
       }
