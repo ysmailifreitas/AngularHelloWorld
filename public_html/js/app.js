@@ -6,7 +6,8 @@ var blogApp = angular.module('blogApp', [
   'ngRoute',
   'blogControllers',
   'blogServices',
-  'blogBusinessServices'
+  'blogBusinessServices',
+  'blogDirectives'
 
 ]);
 
@@ -20,6 +21,12 @@ blogApp.config(['$routeProvider', '$locationProvider',
     }).when('/blogPost/:id', {
       templateUrl: 'partials/blogPost.html',
       controller: 'BlogViewCtrl'
+    }).when('/login', {
+      templateUrl: 'partials/login.html',
+      controller: 'LoginCtrl'
+    }).when('/logOut', {
+      templateUrl: 'partials/login.html',
+      controller: 'LogoutCtrl'
     });
 
     $locationProvider.html5Mode(false).hashPrefix('!');

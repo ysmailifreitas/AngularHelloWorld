@@ -20,3 +20,10 @@ blogServices.factory('BlogList', ['$resource',
       get: {method: 'GET', cache: false, isArray: true}
     });
   }]);
+
+blogServices.factory('Login', ['$resource',
+  function($resource) {
+    return $resource("http://www.goblog.ulboralabs.com/GolangBlog/login", {}, {
+      login: {method: 'POST', cache: false, isArray: false}
+    });
+  }]);
